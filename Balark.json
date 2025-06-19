@@ -1,0 +1,13 @@
+{
+    "id": "Balark",
+    "name": "Balark",
+    "display_name": "Balark",
+    "author": ["Rhelvetican"],
+    "description": "Arknights X Balatro mod.",
+    "prefix": "bark",
+    "main_file": "Balark.lua",
+    "priority": 115,
+    "badge_colour": "000000",
+    "version": "0.1.0",
+    "dependencies": ["Steamodded (>=1.0.0~BETA-0614a)"]
+}
