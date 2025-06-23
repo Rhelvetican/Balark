@@ -1,10 +1,8 @@
-if not SMODS then
-	return
+local utils = require("lib.utils")
+
+if not Balark then
+	Balark = {}
 end
 
-local function SmodsLoads(path)
-	assert(SMODS.load_file(path))
-end
-
-SmodsLoads("./items/Atlas.lua")
-SmodsLoads("./items/OriginiumCard.lua")
+utils.loadFile("items/Atlas.lua")
+utils.loadFile("items/Enhancements.lua")
