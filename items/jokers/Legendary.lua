@@ -27,7 +27,7 @@ SMODS.Joker({
 	-- For future pack lol
 	pools = {},
 
-	atlas = "jkr_legend",
+	atlas = "joker",
 
 	loc_vars = function(_, info_queue, center)
 		info_queue[#info_queue + 1] = G.P_CENTERS.m_stone
