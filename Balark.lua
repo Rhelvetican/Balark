@@ -6,3 +6,4 @@ end
 
 utils.loadFile("items/Atlas.lua")
 utils.loadFile("items/Enhancements.lua")
+utils.loadFile("items/Joker.lua")
