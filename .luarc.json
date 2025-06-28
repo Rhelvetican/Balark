@@ -1,6 +1,7 @@
 {
     "diagnostics.globals": [
         "SMODS",
-        "G"
+        "G",
+        "localize"
     ]
 }

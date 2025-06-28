@@ -1,9 +1,9 @@
-local utils = require("lib.utils")
-
 if not Balark then
 	Balark = {}
 end
 
-utils.loadFile("items/Atlas.lua")
-utils.loadFile("items/Enhancements.lua")
-utils.loadFile("items/Joker.lua")
+require("lib.Balark")
+
+Balark.utils.loadFile("items/Atlas.lua")
+Balark.utils.loadFile("items/Enhancements.lua")
+Balark.utils.loadFile("items/Joker.lua")

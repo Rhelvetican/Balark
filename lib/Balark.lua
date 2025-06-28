@@ -1,3 +1,2 @@
-if not Balark then
-	Balark = {}
-end
+Balark.utils = require("lib.utils")
+Balark.iter = require("lib.iter")

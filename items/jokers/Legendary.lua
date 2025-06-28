@@ -48,6 +48,16 @@ SMODS.Joker({
 			and SMODS.has_enhancement(context.card, "m_stone")
 		then
 			card.ability.extra.x_mult = card.ability.extra.x_mult + card.ability.extra.x_mult_gain
+
+			return {
+				message = localize("k_upgrade_ex"),
+				colour = G.C.RED,
+				card = card,
+			}
+		end
+
+		if context.end_of_round and card.ability.extra.x_mult_gain < 300.0 then
+			card.ability.extra.x_mult_gain = card.ability.extra.x_mult_gain + 0.25
 		end
 
 		if context.joker_main then
@@ -55,3 +65,39 @@ SMODS.Joker({
 		end
 	end,
 })
+
+-- dummy
+-- SMODS.Joker({
+-- 	key = "???",
+-- 	rarity = 4,
+-- 	cost = 20,
+--
+-- 	config = {},
+--
+-- 	pos = {
+-- 		x = 2,
+-- 		y = 0,
+-- 	},
+--
+-- 	soul_pos = {
+-- 		x = 3,
+-- 		y = 0,
+-- 	},
+--
+-- 	blueprint_compat = true,
+-- 	eternal_compat = true,
+-- 	perishable_compat = true,
+--
+-- 	-- For future pack lol
+-- 	pools = {},
+--
+-- 	atlas = "joker",
+--
+-- 	loc_vars = function(_, _, _)
+-- 		return {}
+-- 	end,
+--
+-- 	calculate = function(_, _, _)
+-- 		return { xmult = 9999999 }
+-- 	end,
+-- })
