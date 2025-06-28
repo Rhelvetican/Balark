@@ -1,3 +1,4 @@
+--[[
 SMODS.Enhancement({
 	key = "originium",
 
@@ -18,3 +19,4 @@ SMODS.Enhancement({
 		return {}
 	end,
 })
+]]

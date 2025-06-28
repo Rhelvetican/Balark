@@ -33,4 +33,4 @@ M.all = function(iterator, predicate)
 	return true
 end
 
-return M
+Balark.iter = M
