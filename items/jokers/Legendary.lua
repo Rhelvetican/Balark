@@ -47,7 +47,9 @@ SMODS.Joker({
 			and not context.blueprint
 			and SMODS.has_enhancement(context.card, "m_stone")
 		then
-			card.ability.extra.x_mult = card.ability.extra.x_mult + card.ability.extra.x_mult_gain
+			if card.ability.extra.x_mult < 1e50 then
+				card.ability.extra.x_mult = card.ability.extra.x_mult + card.ability.extra.x_mult_gain
+			end
 
 			return {
 				message = localize("k_upgrade_ex"),
@@ -56,7 +58,7 @@ SMODS.Joker({
 			}
 		end
 
-		if context.end_of_round and card.ability.extra.x_mult_gain < 300.0 then
+		if context.end_of_round and card.ability.extra.x_mult_gain < 1e10 then
 			card.ability.extra.x_mult_gain = card.ability.extra.x_mult_gain + 0.25
 		end
 
