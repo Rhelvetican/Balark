@@ -17,6 +17,16 @@ SMODS.Consumable({
 
 	config = {},
 
+	loc_vars = function(_, _, _)
+		return {
+			vars = {
+				colours = {
+					Balark.gradient,
+				},
+			},
+		}
+	end,
+
 	can_use = function(self, _)
 		return #G.jokers.cards < G.jokers.config.card_limit or self.area == G.jokers
 	end,

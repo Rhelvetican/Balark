@@ -17,7 +17,7 @@ return {
 			c_bark_hyperion = {
 				name = "Hyperion",
 				text = {
-					"Creates a {C:k_bark_mythic,E:2,s:4.0}Mythic{} Joker.",
+					"Creates a {B:1,E:2,s:1.5}Mythic{} Joker.",
 				},
 			},
 		},
