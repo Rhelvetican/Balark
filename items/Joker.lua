@@ -9,7 +9,6 @@ SMODS.Consumable({
 
 	unlocked = true,
 	discovered = true,
-	no_collection = true,
 
 	hidden = {
 		soul_rate = 0.000015,
@@ -22,19 +21,19 @@ SMODS.Consumable({
 		return #G.jokers.cards < G.jokers.config.card_limit or self.area == G.jokers
 	end,
 
-	use = function(_, _)
+	use = function(_, card, _, _)
 		G.E_MANAGER:add_event(Event({
+			trigger = "after",
+			delay = 0.4,
 			func = function()
-				local jonkler = SMODS.create_card({
-					area = G.jokers,
-					rarity = "bark_mythic",
-					set = "Joker",
-				})
-
-				jonkler:add_to_deck()
-				G.jokers:emplace(jonkler)
+				play_sound("timpani")
+				SMODS.add_card({ set = "Joker", rarity = "bark_mythic" })
+				card:juice_up(0.3, 0.5)
+				return true
 			end,
 		}))
+
+		delay(0.6)
 	end,
 })
 
