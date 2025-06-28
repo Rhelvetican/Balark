@@ -1,7 +1,7 @@
 SMODS.Rarity({
-	key = "elite",
+	key = "mythic",
 	badge_colour = SMODS.Gradient({
-		key = "elite_gradient",
+		key = "mythic_gradient",
 		colours = {
 			G.C.GOLD,
 			G.C.BLUE,

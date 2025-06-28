@@ -16,7 +16,7 @@ return {
 
 	misc = {
 		dictionary = {
-			k_bark_elite = "Elite",
+			k_bark_mythic = "Mythic",
 		},
 
 		label = {},

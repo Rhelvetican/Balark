@@ -1,6 +1,6 @@
 SMODS.Joker({
 	key = "mudrock",
-	rarity = "bark_elite",
+	rarity = "bark_mythic",
 	cost = 20,
 
 	config = {
