@@ -12,6 +12,15 @@ return {
 				},
 			},
 		},
+
+		Spectral = {
+			c_bark_hyperion = {
+				name = "Hyperion",
+				text = {
+					"Creates a {C:k_bark_mythic,E:2,s:4.0}Mythic{} Joker.",
+				},
+			},
+		},
 	},
 
 	misc = {
