@@ -7,6 +7,7 @@ SMODS.Joker({
 		extra = {
 			x_mult_gain = 0.5,
 			x_mult = 1.0,
+			flag = true,
 		},
 	},
 
@@ -49,8 +50,7 @@ SMODS.Joker({
 			card.ability.extra.x_mult = card.ability.extra.x_mult_gain + card.ability.extra.x_mult
 		end
 
-		if context.end_of_round then
-			print("GAINS")
+		if context.end_of_round and context.main_eval then
 			card.ability.extra.x_mult_gain = card.ability.extra.x_mult_gain + 0.25
 		end
 
