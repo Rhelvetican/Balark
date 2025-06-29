@@ -51,13 +51,12 @@ SMODS.Consumable({
 SMODS.Joker({
 	key = "mudrock",
 	rarity = "bark_mythic",
-	cost = 20,
+	cost = 30,
 
 	config = {
 		extra = {
 			x_mult_gain = 0.5,
 			x_mult = 1.0,
-			flag = true,
 		},
 	},
 
@@ -112,12 +111,13 @@ SMODS.Joker({
 SMODS.Joker({
 	key = "chen2",
 	rarity = "bark_mythic",
-	cost = 20,
+	cost = 30,
 
 	config = {
 		extra = {
 			x_mult = 1.25,
 			round = 4,
+			hands = 32,
 		},
 	},
 
@@ -144,12 +144,31 @@ SMODS.Joker({
 			vars = {
 				center.ability.extra.x_mult,
 				center.ability.extra.round,
+				center.ability.extra.hands,
+
+				colours = {
+					HEX("#111111"),
+				},
 			},
 		}
 	end,
 
 	calculate = function(_, card, context)
-		--Placeholder
-		return { xmult = 5 }
+		if card.ability.extra.hands > 0 and context.individual and context.cardarea == G.play then
+			return { xmult = card.ability.extra.x_mult }
+		end
+
+		if context.after and not context.blueprint and card.ability.extra.hands > 0 then
+			card.ability.extra.hands = card.ability.extra.hands - 1
+		end
+
+		if context.end_of_round and card.ability.extra.hands == 0 and context.main_eval then
+			if card.ability.extra.round == 0 then
+				card.ability.extra.hands = 32
+				card.ability.extra.round = 4
+			elseif card.ability.extra.round > 0 then
+				card.ability.extra.round = card.ability.extra.round - 1
+			end
+		end
 	end,
 })
