@@ -16,12 +16,12 @@ return {
 				name = "Ch'en the Holungday",
 				text = {
 					{
-						"For the next {C:attention}#1#{} hands",
-						"each cards scored gives {X:mult,C:white,E:2}X#1#{}.",
+						"For the next {C:attention}#1#{} scoring cards,",
+						"each gives {X:mult,C:white,E:2}X#1#{}.",
 						"When the above effect is expired,",
-						"after {C:attention}4{} rounds, {C:attention}refresh{} this Joker.",
+						"after {C:attention}2{} rounds, {C:attention}refresh{} this Joker.",
 					},
-					"{C:inactive}({B:1,C:white} #3# {C:inactive}hands left.){}",
+					"{C:inactive}({B:1,C:white} #3# {C:inactive}cards left.){}",
 					"{C:inactive}(Refresh in{}{B:1,C:white} #2# {C:inactive}rounds.){}",
 				},
 			},
@@ -40,6 +40,7 @@ return {
 	misc = {
 		dictionary = {
 			k_bark_mythic = "Mythic",
+			k_refreshed = "Refreshed!",
 		},
 
 		label = {},

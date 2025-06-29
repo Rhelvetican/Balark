@@ -16,8 +16,6 @@ SMODS.Consumable({
 		can_repeat_soul = true,
 	},
 
-	config = {},
-
 	loc_vars = function(_, _, _)
 		return {
 			vars = {
@@ -100,6 +98,10 @@ SMODS.Joker({
 
 		if context.end_of_round and context.main_eval then
 			card.ability.extra.x_mult_gain = card.ability.extra.x_mult_gain + 0.25
+
+			return {
+				message = "",
+			}
 		end
 
 		if context.joker_main then
@@ -116,8 +118,8 @@ SMODS.Joker({
 	config = {
 		extra = {
 			x_mult = 1.25,
-			round = 4,
-			hands = 32,
+			rounds = 2,
+			cards = 32,
 		},
 	},
 
@@ -154,20 +156,27 @@ SMODS.Joker({
 	end,
 
 	calculate = function(_, card, context)
-		if card.ability.extra.hands > 0 and context.individual and context.cardarea == G.play then
+		if card.ability.extra.cards > 0 and context.individual and context.cardarea == G.play then
+			card.ability.extra.cards = card.ability.extra.cards - 1
 			return { xmult = card.ability.extra.x_mult }
 		end
 
-		if context.after and not context.blueprint and card.ability.extra.hands > 0 then
-			card.ability.extra.hands = card.ability.extra.hands - 1
-		end
-
-		if context.end_of_round and card.ability.extra.hands == 0 and context.main_eval then
+		if context.end_of_round and card.ability.extra.cards == 0 and context.main_eval then
 			if card.ability.extra.round == 0 then
-				card.ability.extra.hands = 32
-				card.ability.extra.round = 4
+				card.ability.extra.cards = 32
+				card.ability.extra.round = 2
+
+				return {
+					message = localize("k_refreshed"),
+					colours = G.C.FILTER,
+				}
 			elseif card.ability.extra.round > 0 then
 				card.ability.extra.round = card.ability.extra.round - 1
+
+				return {
+					message = card.ability.extra.round .. "rounds left!",
+					colours = G.C.FILTER,
+				}
 			end
 		end
 	end,
