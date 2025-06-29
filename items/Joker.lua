@@ -20,7 +20,7 @@ SMODS.Consumable({
 		return {
 			vars = {
 				colours = {
-					Balark.gradient,
+					Arklatro.gradient,
 				},
 			},
 		}

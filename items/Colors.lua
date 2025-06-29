@@ -1,7 +1,7 @@
-Balark.gradient = {}
-Balark.colours = {}
+Arklatro.gradient = {}
+Arklatro.colours = {}
 
-Balark.gradient.mythic = SMODS.Gradient({
+Arklatro.gradient.mythic = SMODS.Gradient({
 	key = "mythic_gradient",
 
 	colours = {
@@ -10,7 +10,7 @@ Balark.gradient.mythic = SMODS.Gradient({
 	},
 })
 
-Balark.gradient.ordinal = SMODS.Gradient({
+Arklatro.gradient.ordinal = SMODS.Gradient({
 	key = "ordinal_gradient",
 	colours = {
 		HEX("#84FFC9"),

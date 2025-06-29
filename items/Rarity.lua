@@ -1,9 +1,9 @@
 SMODS.Rarity({
 	key = "mythic",
-	badge_colour = Balark.gradient.mythic,
+	badge_colour = Arklatro.gradient.mythic,
 })
 
 SMODS.Rarity({
 	key = "transcendental",
-	badge_colour = Balark.gradient.ordinal,
+	badge_colour = Arklatro.gradient.ordinal,
 })
