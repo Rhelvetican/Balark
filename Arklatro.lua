@@ -1,11 +1,11 @@
-if not Balark then
-	Balark = {}
+if not Arklatro then
+	Arklatro = {}
 end
 
 local path = "" .. SMODS.current_mod.path
 local libitems = NFS.getDirectoryItems(path .. "lib")
 
-Balark.path = path
+Arklatro.path = path
 
 for _, file in pairs(libitems) do
 	local f, err = SMODS.load_file("lib/" .. file)

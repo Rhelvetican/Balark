@@ -6,5 +6,4 @@ M.loadFile = function(path)
 	assert(SMODS.load_file(path))()
 end
 
-Balark.utils = M
-
+Arklatro.utils = M

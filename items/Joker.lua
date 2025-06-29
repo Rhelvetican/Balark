@@ -3,7 +3,7 @@ SMODS.Consumable({
 	set = "Spectral",
 
 	cost = 4,
-	atlas = "bark_spectral",
+	atlas = "arkl_spectral",
 	pos = { x = 0, y = 0 },
 	soul_pos = { x = 1, y = 0 },
 
@@ -36,7 +36,7 @@ SMODS.Consumable({
 			delay = 0.4,
 			func = function()
 				play_sound("timpani")
-				SMODS.add_card({ set = "Joker", rarity = "bark_mythic" })
+				SMODS.add_card({ set = "Joker", rarity = "arkl_mythic" })
 				card:juice_up(0.3, 0.5)
 				return true
 			end,
@@ -48,7 +48,7 @@ SMODS.Consumable({
 
 SMODS.Joker({
 	key = "mudrock",
-	rarity = "bark_mythic",
+	rarity = "arkl_mythic",
 	cost = 30,
 
 	config = {
@@ -112,7 +112,7 @@ SMODS.Joker({
 
 SMODS.Joker({
 	key = "chen2",
-	rarity = "bark_mythic",
+	rarity = "arkl_mythic",
 	cost = 30,
 
 	config = {
@@ -184,7 +184,7 @@ SMODS.Joker({
 
 SMODS.Joker({
 	key = "wisadel",
-	rarity = "bark_transcendental",
+	rarity = "arkl_transcendental",
 	cost = 9999,
 
 	config = {

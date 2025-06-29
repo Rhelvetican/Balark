@@ -1,13 +1,13 @@
 {
-    "id": "Balark",
-    "name": "Balark",
-    "display_name": "Balark",
+    "id": "arkl",
+    "name": "Arklatro",
+    "display_name": "Arklatro",
     "author": [
         "Rhelvetican"
     ],
     "description": "Arknights X Balatro mod.",
-    "prefix": "bark",
-    "main_file": "Balark.lua",
+    "prefix": "arkl",
+    "main_file": "Arklatro.lua",
     "priority": 115,
     "badge_colour": "000000",
     "version": "0.0.1-indev",

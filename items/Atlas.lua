@@ -6,8 +6,8 @@ SMODS.Atlas({
 })
 
 SMODS.Atlas({
-	key = "bark_spectral",
-	path = "bark_spectral.png",
+	key = "arkl_spectral",
+	path = "arkl_spectral.png",
 	px = 71,
 	py = 95,
 })

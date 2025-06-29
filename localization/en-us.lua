@@ -1,7 +1,7 @@
 return {
 	descriptions = {
 		Joker = {
-			j_bark_mudrock = {
+			j_arkl_mudrock = {
 				name = "Mudrock",
 				text = {
 					"This Joker gains {X:mult,C:white,E:2}X#1#{}",
@@ -12,7 +12,7 @@ return {
 				},
 			},
 
-			j_bark_chen2 = {
+			j_arkl_chen2 = {
 				name = "Ch'en the Holungday",
 				text = {
 					{
@@ -26,14 +26,14 @@ return {
 				},
 			},
 
-			j_bark_wisadel = {
+			j_arkl_wisadel = {
 				name = "Wiš'adel",
 				text = {},
 			},
 		},
 
 		Spectral = {
-			c_bark_hyperion = {
+			c_arkl_hyperion = {
 				name = "Hyperion",
 				text = {
 					"Creates a {B:1,E:2,s:1.5}Mythic{} Joker.",
@@ -44,8 +44,8 @@ return {
 
 	misc = {
 		dictionary = {
-			k_bark_mythic = "Mythic",
-			k_bark_transcendental = "Transcendental",
+			k_arkl_mythic = "Mythic",
+			k_arkl_transcendental = "Transcendental",
 			k_refreshed = "Refreshed!",
 		},
 
