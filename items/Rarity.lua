@@ -1,12 +1,9 @@
-Balark.gradient = SMODS.Gradient({
-	key = "mythic_gradient",
-	colours = {
-		G.C.GOLD,
-		G.C.BLUE,
-	},
+SMODS.Rarity({
+	key = "mythic",
+	badge_colour = Balark.gradient.mythic,
 })
 
 SMODS.Rarity({
-	key = "mythic",
-	badge_colour = Balark.gradient,
+	key = "transcendental",
+	badge_colour = Balark.gradient.ordinal,
 })

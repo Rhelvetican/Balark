@@ -181,3 +181,39 @@ SMODS.Joker({
 		end
 	end,
 })
+
+SMODS.Joker({
+	key = "wisadel",
+	rarity = "bark_transcendental",
+	cost = 9999,
+
+	config = {
+		extra = {},
+	},
+
+	pos = {
+		x = 4,
+		y = 0,
+	},
+
+	soul_pos = {
+		x = 5,
+		y = 0,
+	},
+
+	blueprint_compat = true,
+	eternal_compat = true,
+	perishable_compat = true,
+
+	pools = {},
+
+	atlas = "joker",
+
+	loc_vars = function(_, _, center)
+		return {
+			vars = {},
+		}
+	end,
+
+	calculate = function(_, card, context) end,
+})

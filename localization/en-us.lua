@@ -25,6 +25,11 @@ return {
 					"{C:inactive}(Refresh in{}{B:1,C:white} #2# {C:inactive}rounds.){}",
 				},
 			},
+
+			j_bark_wisadel = {
+				name = "Wiš'adel",
+				text = {},
+			},
 		},
 
 		Spectral = {
@@ -40,6 +45,7 @@ return {
 	misc = {
 		dictionary = {
 			k_bark_mythic = "Mythic",
+			k_bark_transcendental = "Transcendental",
 			k_refreshed = "Refreshed!",
 		},
 
