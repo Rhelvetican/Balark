@@ -10,6 +10,7 @@ SMODS.Consumable({
 	unlocked = true,
 	discovered = true,
 
+	---@diagnostic disable-next-line: assign-type-mismatch
 	hidden = {
 		soul_rate = 0.000015,
 		can_repeat_soul = true,
@@ -105,5 +106,50 @@ SMODS.Joker({
 		if context.joker_main then
 			return { xmult = card.ability.extra.x_mult }
 		end
+	end,
+})
+
+SMODS.Joker({
+	key = "chen2",
+	rarity = "bark_mythic",
+	cost = 20,
+
+	config = {
+		extra = {
+			x_mult = 1.25,
+			round = 4,
+		},
+	},
+
+	pos = {
+		x = 2,
+		y = 0,
+	},
+
+	soul_pos = {
+		x = 3,
+		y = 0,
+	},
+
+	blueprint_compat = true,
+	eternal_compat = true,
+	perishable_compat = true,
+
+	pools = {},
+
+	atlas = "joker",
+
+	loc_vars = function(_, _, center)
+		return {
+			vars = {
+				center.ability.extra.x_mult,
+				center.ability.extra.round,
+			},
+		}
+	end,
+
+	calculate = function(_, card, context)
+		--Placeholder
+		return { xmult = 5 }
 	end,
 })

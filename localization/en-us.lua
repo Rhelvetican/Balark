@@ -11,6 +11,13 @@ return {
 					"{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)",
 				},
 			},
+
+			j_bark_chen2 = {
+				name = "Ch'en the Holungday",
+				text = {
+					"",
+				},
+			},
 		},
 
 		Spectral = {
