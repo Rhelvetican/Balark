@@ -218,9 +218,11 @@ SMODS.Joker({
 
 	atlas = "joker",
 
-	loc_vars = function(_, _, _)
+	loc_vars = function(_, _, card)
 		return {
 			vars = {
+				card.ability.extra.x_mult,
+				card.ability.extra.hand_size_increase,
 				colours = {
 					Arklatro.gradient.transcendental,
 				},

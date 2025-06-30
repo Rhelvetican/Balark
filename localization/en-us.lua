@@ -28,8 +28,9 @@ return {
 				name = "Wis'adel",
 				text = {
 					"Convert all scored playing cards into",
-					"{X:edition,C:attention,E:1}Polychrome Red Seal Steel Kings{}",
-					"Also gives {X:mult,V:1,E:2,s:3.0}X9.99e256{} Mults.",
+					"{X:edition,C:attention,E:1}Polychrome{} {X:edition,C:attention,E:1}Polychrome}Red{} {X:edition,C:attention,E:1}Polychrome}Seal{} {X:edition,C:attention,E:1}Polychrome}Steel{} {X:edition,C:attention,E:1}Polychrome}Kings{}",
+					"Also gives {X:mult,V:1,E:2,s:3.0}X#1#{} Mults.",
+					"At the end of turn, increase {C:attention}hand size{} by {X:dark_edition,E:2,C:white}2{}.",
 				},
 			},
 		},
