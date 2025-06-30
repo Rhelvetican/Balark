@@ -200,6 +200,11 @@ SMODS.Joker({
 	soul_pos = {
 		x = 5,
 		y = 0,
+
+		extra = {
+			x = 6,
+			y = 0,
+		},
 	},
 
 	blueprint_compat = true,
@@ -210,5 +215,15 @@ SMODS.Joker({
 
 	atlas = "joker",
 
-	calculate = function(_, card, context) end,
+	loc_vars = function(_, _, _)
+		return {
+			colours = {
+				Arklatro.gradient.transcendental,
+			},
+		}
+	end,
+
+	calculate = function(_, _, _)
+		return { xmult = 9.99e256 }
+	end,
 })

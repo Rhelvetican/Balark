@@ -5,5 +5,5 @@ SMODS.Rarity({
 
 SMODS.Rarity({
 	key = "transcendental",
-	badge_colour = Arklatro.gradient.ordinal,
+	badge_colour = Arklatro.gradient.transcendental,
 })

@@ -27,7 +27,8 @@ return {
 			j_arkl_wisadel = {
 				name = "Wis'adel",
 				text = {
-					"",
+					"Yeah so pretend this is a description.",
+					"Also gives {X:mult,V:1,E:2,s:3.0}X9.99e256{}.",
 				},
 			},
 		},

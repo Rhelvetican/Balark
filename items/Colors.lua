@@ -2,7 +2,7 @@ Arklatro.gradient = {}
 Arklatro.colours = {}
 
 Arklatro.gradient.mythic = SMODS.Gradient({
-	key = "mythic_gradient",
+	key = "grad_myth",
 
 	colours = {
 		HEX("95ECB0"),
@@ -10,8 +10,8 @@ Arklatro.gradient.mythic = SMODS.Gradient({
 	},
 })
 
-Arklatro.gradient.ordinal = SMODS.Gradient({
-	key = "ordinal_gradient",
+Arklatro.gradient.transcendental = SMODS.Gradient({
+	key = "grad_transcend",
 	colours = {
 		HEX("84FFC9"),
 		HEX("AAB2FF"),
