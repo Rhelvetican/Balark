@@ -189,7 +189,10 @@ SMODS.Joker({
 	cost = 9999,
 
 	config = {
-		extra = {},
+		extra = {
+			x_mult = 9.99e256,
+			hand_size_increase = 2,
+		},
 	},
 
 	pos = {
@@ -217,13 +220,77 @@ SMODS.Joker({
 
 	loc_vars = function(_, _, _)
 		return {
-			colours = {
-				Arklatro.gradient.transcendental,
+			vars = {
+				colours = {
+					Arklatro.gradient.transcendental,
+				},
 			},
 		}
 	end,
 
-	calculate = function(_, _, _)
-		return { xmult = 9.99e256 }
+	calculate = function(_, card, context)
+		if
+			context.cardarea == G.jokers
+			and context.before
+			and not context.blueprint_card
+			and not context.retrigger_joker
+		then
+			for i = 1, #context.scoring_hand do
+				local other_card = context.scoring_hand[i]
+
+				G.E_MANAGER:add_event(Event({
+					trigger = "after",
+					delay = 0.4,
+					func = function()
+						play_sound("tarot1")
+						other_card:juice_up(0.3, 0.5)
+						return true
+					end,
+				}))
+				delay(0.15)
+				G.E_MANAGER:add_event(Event({
+					trigger = "after",
+					delay = 0.1,
+					func = function()
+						other_card:flip()
+						return true
+					end,
+				}))
+				G.E_MANAGER:add_event(Event({
+					trigger = "after",
+					delay = 0.2,
+					func = function()
+						other_card = assert(SMODS.change_base(other_card, "Hearts", "King"))
+						other_card:set_seal("Red", nil, true)
+						other_card:set_edition("e_polychrome")
+						other_card:set_ability("m_steel")
+						other_card:juice_up()
+						return true
+					end,
+				}))
+				delay(0.2)
+				G.E_MANAGER:add_event(Event({
+					trigger = "after",
+					delay = 0.1,
+					func = function()
+						other_card:flip()
+						return true
+					end,
+				}))
+			end
+
+			return {
+				message = "Ultimate!",
+				colour = Arklatro.gradient.mythic,
+			}
+		end
+
+		if context.joker_main then
+			return { xmult = card.ability.extra.x_mult }
+		end
+
+		if context.end_of_round and context.main_eval then
+			G.hand:change_size(card.ability.extra.hand_size_increase)
+		end
 	end,
 })
