@@ -15,20 +15,20 @@ return {
 			j_arkl_chen2 = {
 				name = "Ch'en the Holungday",
 				text = {
-					{
-						"For the next {C:attention}#1#{} scoring cards,",
-						"each gives {X:mult,C:white,E:2}X#1#{}.",
-						"When the above effect is expired,",
-						"after {C:attention}2{} rounds, {C:attention}refresh{} this Joker.",
-					},
-					"{C:inactive}({B:1,C:white} #3# {C:inactive}cards left.){}",
-					"{C:inactive}(Refresh in{}{B:1,C:white} #2# {C:inactive}rounds.){}",
+					"For the next {C:attention}#3#{} scoring cards,",
+					"each gives {X:mult,C:white,E:2}X#1#{}.",
+					"When the above effect is expired,",
+					"after {C:attention}2{} rounds, {C:attention}refresh{} this Joker.",
+
+					"{C:inactive}(Refresh in {}{B:1,C:white}#2#{C:inactive} rounds.){}",
 				},
 			},
 
 			j_arkl_wisadel = {
-				name = "Wiš'adel",
-				text = {},
+				name = "Wis'adel",
+				text = {
+					"",
+				},
 			},
 		},
 

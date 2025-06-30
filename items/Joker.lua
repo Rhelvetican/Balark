@@ -20,7 +20,7 @@ SMODS.Consumable({
 		return {
 			vars = {
 				colours = {
-					Arklatro.gradient,
+					Arklatro.gradient.mythic,
 				},
 			},
 		}
@@ -100,7 +100,8 @@ SMODS.Joker({
 			card.ability.extra.x_mult_gain = card.ability.extra.x_mult_gain + 0.25
 
 			return {
-				message = "",
+				message = localize("k_upgrade_ex"),
+				colours = G.C.MULT,
 			}
 		end
 
@@ -117,7 +118,7 @@ SMODS.Joker({
 
 	config = {
 		extra = {
-			x_mult = 1.25,
+			x_mult = 2.5,
 			rounds = 2,
 			cards = 32,
 		},
@@ -145,11 +146,11 @@ SMODS.Joker({
 		return {
 			vars = {
 				center.ability.extra.x_mult,
-				center.ability.extra.round,
-				center.ability.extra.hands,
+				center.ability.extra.rounds,
+				center.ability.extra.cards,
 
 				colours = {
-					HEX("#111111"),
+					HEX("1C1C1C"),
 				},
 			},
 		}
@@ -162,20 +163,20 @@ SMODS.Joker({
 		end
 
 		if context.end_of_round and card.ability.extra.cards == 0 and context.main_eval then
-			if card.ability.extra.round == 0 then
+			if card.ability.extra.rounds == 0 then
 				card.ability.extra.cards = 32
-				card.ability.extra.round = 2
+				card.ability.extra.rounds = 2
 
 				return {
 					message = localize("k_refreshed"),
-					colours = G.C.FILTER,
+					colour = G.C.FILTER,
 				}
-			elseif card.ability.extra.round > 0 then
-				card.ability.extra.round = card.ability.extra.round - 1
+			elseif card.ability.extra.rounds > 0 then
+				card.ability.extra.rounds = card.ability.extra.rounds - 1
 
 				return {
-					message = card.ability.extra.round .. "rounds left!",
-					colours = G.C.FILTER,
+					message = card.ability.extra.rounds .. "rounds left!",
+					colour = G.C.FILTER,
 				}
 			end
 		end
@@ -208,12 +209,6 @@ SMODS.Joker({
 	pools = {},
 
 	atlas = "joker",
-
-	loc_vars = function(_, _, center)
-		return {
-			vars = {},
-		}
-	end,
 
 	calculate = function(_, card, context) end,
 })
